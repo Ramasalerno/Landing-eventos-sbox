@@ -1,0 +1,613 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.TextBold {
+    font-weight: 901;
+}
+
+.honduras,
+.guatemala {
+    font-family: 'FreestyleScript-Regular', cursive;
+    font-size: 55px;
+}
+
+.contCharlaHonduras,
+.contCharlaGuatemala {
+    /* background-color: #c7c7c748; */
+    border-radius: 30px;
+    padding: 20px;
+    /* box-shadow: rgb(161 161 161) 0 0 55px; */
+    text-decoration: none;
+    color: #2f388d;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorCharlas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.section-principal {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin-top: 80px;
+    background: url("/backgrounds/sectionPrincipal.webp") no-repeat center center;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+
+    /* Para dispositivos móviles */
+    .section-principal {
+        background-image: url("/backgrounds/sectionPrincipal-mobile.webp");
+    }
+}
+
+
+.textBannerPrincipal {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: #fffffe61;
+    position: absolute;
+    bottom: 0px;
+    transition: all 0.3s;
+}
+
+.TextLight {
+    font-weight: 500 !important;
+    transition: all 0.3s;
+}
+
+.textColumna {
+    flex: 1 1 200px;
+    /* Ajuste flexible con un mínimo de 200px */
+    margin: 0.5rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.buttonBanner {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* border: 2px solid #fff; */
+    background-color: transparent;
+    font-weight: 800;
+    padding: 15px;
+    border: none;
+    /* width: 350px; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.buttonBanner:hover {
+    /* background-color: #2f388dde; */
+    text-decoration: underline;
+    transition: all 0.3s;
+}
+
+.pre-registro,
+.patrocinar,
+.verFotos {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    background-color: #2f388dde;
+    font-weight: 800;
+    padding: 15px;
+    border-radius: 35px;
+    width: 300px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.pre-registro:hover,
+.patrocinar:hover,
+.verFotos:hover {
+    background-color: #2f388d75;
+    transition: all 0.3s;
+}
+
+.botonH6 {
+    padding: 10px;
+    color: #2f388d;
+    font-size: 2rem;
+    width: 90%;
+    text-align: center;
+    margin: 20px 0px;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+.registrarme {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* border: 1.8px solid #2f388d; */
+    background-color: #2f388d;
+    padding: 5px;
+    border-radius: 50px;
+    width: 200px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.3em;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+.registrarme:hover {
+    background-color: #2f388dde;
+    transition: all 0.3s;
+}
+
+.tracks-container {
+    background-image: url("/tracksTematicos.jpg");
+    /* Ruta relativa desde /public */
+    background-size: cover;
+    /* Para que la imagen cubra todo el div */
+    background-position: center;
+    /* Centrar la imagen */
+    background-repeat: no-repeat;
+    /* Evitar repeticiones */
+    padding: 50px 20px;
+    /* Ajusta el espaciado interno */
+    border-radius: 10px;
+    /* Opcional: Bordes redondeados */
+}
+
+.marcas-container {
+    position: relative;
+    /* Asegura que ::before y ::after funcionen */
+    padding: 50px 20px;
+    overflow: hidden;
+    color: white;
+    /* Asegura que el texto sea blanco */
+    text-align: center;
+    /* Centra el contenido */
+}
+
+/* Imagen de fondo */
+.marcas-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/tracksTematicos.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    /* Se coloca detrás del contenido */
+}
+
+/* Capa de color semitransparente */
+.marcas-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(47, 56, 141, 0.16);
+    /* Color semitransparente */
+    z-index: -1;
+    /* Entre la imagen y el contenido */
+}
+
+/* Asegurar que el texto se mantenga visible */
+.marcas-container * {
+    position: relative;
+    z-index: 1;
+    /* Para que el texto no quede detrás del fondo */
+}
+
+
+
+/* Contenedor del carrusel */
+.carousel-marcas {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Línea de imágenes con animación */
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    animation: slide 60s linear infinite;
+}
+
+/* Estilos de imágenes */
+.carousel-track img {
+    max-width: 1000px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* Animación infinita */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.contenedorCardLineUp {
+    width: 300px;
+    height: 470px;
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.cardContent {
+    padding: 0px 20px 20px;
+    gap: 20px;
+    justify-content: space-between;
+    height: 70%;
+    transition: all 0.3s;
+}
+
+.imgFondoLineUp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: url("/backgrounds/sectionLineUp.jpg") center center / cover no-repeat; */
+    max-height: 100%;
+    transition: all 0.3s;
+}
+
+.contenedorTracks {
+    padding: 0px 150px;
+    transition: all 0.3s;
+}
+
+/* TRACKS */
+.tracks-tematicos {
+    color: #2f388d;
+    font-weight: 905;
+    font-size: 4em;
+    transition: all 0.3s;
+}
+
+/* TRACKS */
+
+/* MARCAS */
+.marcas-acompañan {
+    color: #2f388d;
+    font-weight: 905;
+    font-size: 3em;
+    transition: all 0.3s;
+}
+
+/* MARCAS */
+
+.contenedorTracks p {
+    font-size: 1.5em;
+    transition: all 0.3s;
+}
+
+/* BOTONES */
+.contenedorButtons {
+    position: absolute;
+    /* Se mantiene en la posición absoluta dentro del contenedor */
+    bottom: 1em;
+    /* Siempre a 20px del borde inferior */
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s;
+    /* Espacio entre botones */
+}
+
+/* BOTON SCROLL TO TOP  ********************************************* */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #a4a4a480;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, background-color 0.3s;
+    z-index: 1000;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #b6b6b6a6;
+}
+
+.scroll-to-top-btn:focus {
+    outline: none;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0px !important;
+    width: 50px;
+    height: 50px;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bd-violet-bg);
+    --bs-tooltip-color: var(--bs-white);
+}
+
+.menuBtn {
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: flex;
+    transition: all 0.3s;
+    background-color: transparent;
+}
+
+.menuBtn:hover {
+    background-color: #c7c7c748;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.blurreado {
+    --bs-bg-opacity: 1;
+    background-color: #2f388dcf !important;
+}
+
+.borde-blanco:focus-visible {
+    color: #c6c6c6;
+}
+
+/* BOTON SCROLL TO TOP  ********************************************* */
+/* BOTONES */
+
+.imgRegistroPatrocinar {
+    object-fit: cover;
+}
+
+.contenedorRegistroPatrocinar {
+    position: relative;
+    height: 75vh;
+    background: url("/backgrounds/expoSolutionBox-3-16.jpg") center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: all 0.3s;
+}
+
+@media (max-width: 1500px) {
+    .contenedorRegistroPatrocinar {
+        height: 60vh
+            /* !important */
+        ;
+    }
+}
+
+.banderas {
+    width: 450px;
+}
+
+@media (max-width: 1200px) {
+    .imgRegistroPatrocinar {
+        object-fit: contain;
+    }
+
+    /* .contenedorButtons {
+        bottom: 110px;
+    } */
+
+    .contenedorRegistroPatrocinar {
+        /* background: url("/backgrounds/registro-patrocinio-mobile.jpg") center center / cover no-repeat; */
+        height: 45vh
+            /* !important */
+        ;
+    }
+}
+
+@media (max-width: 992px) {
+    .contenedorCardLineUp {
+        width: 160px;
+    }
+
+    .cardContent {
+        gap: 0px;
+        padding: 0px;
+    }
+
+    /* .imgPaisaje {
+        background: none !important;
+    } */
+
+    .registrarme {
+        font-size: .8em;
+        width: 150px;
+    }
+
+    .cardContent {
+        height: 300px;
+        justify-content: space-between;
+    }
+
+    .contenedorTracks {
+        padding: 0px 20px;
+    }
+
+    .banderas {
+        width: 400px;
+    }
+
+    .contenedorRegistroPatrocinar {
+        height: 35vh
+            /* !important */
+        ;
+    }
+}
+
+@media(max-width:840px) {
+    .contenedorRegistroPatrocinar {
+        background: url("/backgrounds/registro-patrocinio-mobile.jpg") center center / cover no-repeat;
+        height: 90vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* VISTA MOBILE */
+    .textColumna {
+        font-size: 1rem !important;
+        width: 30%;
+    }
+
+    .contenedorBotones {
+        flex-direction: column;
+    }
+
+    .pre-registro,
+    .patrocinar {
+        gap: 4px !important;
+        font-size: 1rem;
+        /* Reduce tamaño de texto */
+        padding: 0.1rem 0rem;
+        /* Reduce padding */
+        width: 220px;
+    }
+
+    .botonH6 {
+        /* width: 350px; */
+        text-align: center;
+    }
+
+    .contenedorH6 {
+        align-items: center;
+    }
+
+    .contenedorTracks {
+        padding: 0px 10px;
+    }
+
+    .contenedorTracks p {
+        font-size: 1em;
+    }
+
+    .contenedorButtons {
+        bottom: 1em;
+    }
+
+    .cardContent {
+        height: 50%;
+    }
+
+    .tracks-tematicos {
+        font-size: 2.3em;
+    }
+
+    .marcas-acompañan {
+        font-size: 2em;
+    }
+
+    .contenedorRegistroPatrocinar {
+        height: 75vh
+            /* !important */
+        ;
+    }
+}
+
+@media (max-width:540px) {
+    .contenedorButtons {
+        bottom: 20px;
+    }
+
+    .contenedorRegistroPatrocinar {
+        height: 50vh
+            /* !important */
+        ;
+    }
+}
+
+@media (max-width: 576px) {
+    .contenedorText {
+        gap: 1rem;
+    }
+
+    .textColumna {
+        font-size: 1rem;
+    }
+
+    .banderas {
+        width: 400px;
+    }
+}
+
+@media (max-width:400px) {
+    .textBannerPrincipal {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        color: #fffffe61;
+        position: inherit;
+        bottom: 0px;
+    }
+
+    .banderas {
+        width: 300px;
+    }
+}
+
+
+
+@media (max-width:600px) {
+    .contenedorRegistroPatrocinar {
+        height: 60vh
+            /* !important */
+        ;
+    }
+}

@@ -1,0 +1,17 @@
+body {
+  font-family: 'Gotham', sans-serif;
+  font-weight: 500;
+  /* Light */
+}
+
+h2, p {
+  font-family: 'Gotham', sans-serif;
+  font-weight: 900;
+  /* Black */
+}
+
+button {
+  font-family: 'Gotham', sans-serif;
+  font-weight: 700;
+  /* Bold */
+}
